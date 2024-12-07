@@ -1,0 +1,159 @@
+.space__ {
+  &crew {
+    // height: calc(100vh - 212px);
+    // display: flex;
+    max-width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.destination__ {
+  &title {
+    text-align: left;
+  }
+}
+
+.crew__ {
+  &pagination {
+    display: flex;
+    margin-top: 120px;
+    gap: 24px;
+  }
+  &slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+  &info {
+    max-width: 614px;
+  }
+  &role {
+    font-size: 32px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0.5;
+  }
+  &name {
+    font-size: 56px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 15px;
+  }
+  &description {
+    font-size: 18px;
+    line-height: 32px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    color: #d0d6f9;
+    margin-top: 27px;
+    max-width: 444px;
+  }
+  &imgCrew {
+    max-width: 568px;
+    height: auto;
+    mask-image: linear-gradient(black 80%, transparent);
+  }
+}
+
+.pagination__btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #979797;
+  cursor: pointer;
+}
+
+.pagination__btn:hover {
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 820px) {
+  .space__ {
+    &crew {
+      margin-top: 136px;
+      overflow: auto;
+    }
+  }
+  .swiper__ {
+    &content {
+      margin-top: 60px;
+    }
+  }
+  .crew__ {
+    &slide {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    &info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &pagination {
+      margin-top: 40px;
+    }
+    &role {
+      font-size: 24px;
+    }
+    &name {
+      font-size: 40px;
+    }
+    &description {
+      font-size: 16px;
+    }
+    &imgCrew {
+      max-width: 540px;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .space__ {
+    &crew {
+      max-width: 100%;
+      margin-top: 145px;
+      overflow-y: auto;
+    }
+  }
+  .crew__ {
+    &content {
+      margin: 0;
+      padding-inline: 24px;
+    }
+    &pagination {
+      order: 2;
+      margin-top: 0;
+      margin-bottom: 32px;
+    }
+    &info {
+      order: 2;
+    }
+    &role {
+      font-size: 16px;
+      order: 3;
+    }
+    &name {
+      font-size: 24px;
+      order: 4;
+    }
+    &description {
+      font-size: 15px;
+      line-height: 25px;
+      order: 5;
+      box-sizing: border-box;
+      margin-bottom: 60px;
+    }
+    &img {
+      max-width: 327px;
+      order: 1;
+    }
+    &imgCrew {
+      max-width: 327px;
+    }
+  }
+}

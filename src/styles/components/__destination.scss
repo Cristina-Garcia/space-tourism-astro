@@ -1,0 +1,228 @@
+.space__ {
+  &destination {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80%;
+    // height: 100vh;
+    justify-content: space-between;
+    margin-top: 76px;
+  }
+}
+.destination__ {
+  &content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 157px;
+  }
+  &planet {
+    display: flex;
+    flex-direction: column;
+    width: 445px;
+    height: 445px;
+  }
+  &imgPlanet {
+    margin-top: 97px;
+    margin-left: 63px;
+  }
+  &info {
+    max-width: 445px;
+    margin-top: 64px;
+  }
+  &title {
+    font-size: 28px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+  }
+  &number {
+    opacity: 0.25;
+    margin-right: 28px;
+    font-weight: bold;
+  }
+  &list {
+    display: flex;
+    gap: 35px;
+  }
+  &option {
+    list-style: none;
+    font-size: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 2rem;
+      background: #ffffff;
+      width: 0;
+      height: 3px;
+      transition: all 0.3s ease-in;
+    }
+    &:hover::before {
+      width: 100%;
+      background: #979797;
+    }
+    &.active::before {
+      width: 100%;
+    }
+  }
+  &name {
+    font-size: 100px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 37px;
+  }
+  &text {
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    color: #d0d6f9;
+    margin-top: 14px;
+    margin-bottom: 54px;
+  }
+  &line {
+    width: 100%;
+    background-color: #383b4b;
+    height: 1px;
+    margin-bottom: 28px;
+  }
+  &data {
+    display: flex;
+    gap: 125px;
+  }
+}
+
+.data__ {
+  &datos {
+    display: flex;
+    flex-direction: column;
+  }
+  &subtitle {
+    font-size: 14px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    color: #d0d6f9;
+    margin-bottom: 12px;
+    letter-spacing: 2.36px;
+  }
+  &dato {
+    font-size: 28px;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    color: #fff;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .space__ {
+    &destination {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 212px;
+    }
+  }
+  .destination__ {
+    &content {
+      gap: 50px;
+    }
+    &info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0;
+    }
+    &technology,
+    &list {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    &planet {
+      max-width: 300px;
+      height: auto;
+      margin: 0;
+      margin-block: 60px;
+    }
+    &imgPlanet {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .space__ {
+    &destination {
+      display: flex;
+      flex-direction: column;
+      padding-top: 100px;
+      width: 100%;
+      overflow-y: auto;
+      margin: 0;
+      margin-top: 100px !important;
+      box-sizing: border-box;
+    }
+  }
+  .destination__ {
+    &content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+    }
+    &info {
+      margin-top: 0;
+    }
+    &planet {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      width: 170px;
+      height: 170px;
+    }
+    &title {
+      font-size: 16px;
+      text-align: center;
+      font-family: 'Barlow', sans-serif;
+      margin-top: 140px;
+    }
+    &number {
+      width: 100%;
+      margin-right: 18px;
+    }
+    &planet {
+      width: 170px;
+      height: 170px;
+    }
+    &imgPlanet {
+      width: 170px;
+      height: 170px;
+      margin-top: 32px;
+      margin-left: 0;
+    }
+
+    &name {
+      font-size: 56px;
+    }
+    &text {
+      margin-bottom: 32px;
+    }
+    &data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 32px;
+      gap: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+}

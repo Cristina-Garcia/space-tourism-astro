@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro'
+const d ='/assets/technology/background-technology-desktop.jpg'
+const t ='/assets/technology/background-technology-tablet.jpg'
+const m ='/assets/technology/background-technology-mobile.jpg'
+
+
+---
+
+<Layout bgImage=`${d}` bgTImg=`${t}` bgMImg=`${m}`>
+<div class="space__technology">
+  <h1 class="destination__title"> <span class="destination__number">03</span> SPACE LAUNCH 101</h1>
+  <div class="launch__content">
+    <div class="launch__info">
+      <div class="launch__pagination">
+        <div class="pagination__btnBig" data-name="Launch vehicle">1</div>
+        <div class="pagination__btnBig" data-name="Spaceport">2</div>
+        <div class="pagination__btnBig" data-name="Space capsule">3</div>
+      </div>
+      <div class="launch__infoLaunch">
+        <h3 class="infoLaunch__subtitle">THE TERMINOLOGY...</h3>
+        <h2 class="infoLaunch__name">LAUNCH VEHICLE</h2>
+        <p class="infoLaunch__description">"A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"</p>
+      </div>
+    </div>
+    <div class="launch__img">
+      <img src='' alt="" class="img__launch">
+    </div>
+  </div>
+
+</div>
+ <script src="../js/technology.js"></script>
+</Layout>

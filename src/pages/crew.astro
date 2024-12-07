@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Slider from '../components/Slider.astro'
+
+
+const d ='/assets/crew/background-crew-desktop.jpg'
+const t ='/assets/crew/background-crew-tablet.jpg'
+const m ='/assets/crew/background-crew-mobile.jpg'
+---
+<Layout bgImage=`${d}` bgTImg=`${t}` bgMImg=`${m}`>
+  <article class="space__crew">
+    <div class="crew__content">
+      <h1 class="destination__title"> <span class="destination__number">02</span> MEET YOUR CREW</h1>
+      <div class="swiper__content">
+        <div class="swiper__wrapper">
+        <Slider />
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script src="../js/crew.js"></script>
+</Layout>

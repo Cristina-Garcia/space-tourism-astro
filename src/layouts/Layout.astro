@@ -1,0 +1,45 @@
+---
+import Header from '../components/Header.astro'
+
+const{bgImage, bgTImg, bgMImg}=Astro.props
+const varbackgroundImg= `url(${bgImage})`
+const varbackgroundTImg= `url(${bgTImg})`
+const varbackgroundMImage= `url(${bgMImg})`
+---
+<html>
+  <head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="assets/icon-universe.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Space Tourism</title>
+		<link rel="stylesheet" href="./css/index.css">
+
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="space__wrapper">
+			<dir class="space__content">
+				<Header/>
+				<main class="space__main">
+					<slot/>
+				</main>
+			</dir>
+		</div>
+    <script src="../js/destination.js"></script>
+	</body>
+	<style is:global define:vars={{varbackgroundImg,varbackgroundMImage,varbackgroundTImg}}>
+	.space__wrapper{
+		background-image: var(--varbackgroundImg);
+	}
+	@media only screen and (max-width: 820px){
+	.space__wrapper{
+		background-image: var(--varbackgroundTImg);
+	}
+	}
+	</style>
+	<script src="../js/menu.js"></script>
+</html>

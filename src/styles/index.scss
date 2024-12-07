@@ -1,0 +1,15 @@
+@import 'components/__header';
+@import 'components/__home';
+@import './components/__destination';
+@import './components/__crew';
+@import './components/__technology';
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  color: #d0d6f9;
+}

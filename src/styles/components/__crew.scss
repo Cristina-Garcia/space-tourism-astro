@@ -6,13 +6,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 62px;
+    @media only screen and (max-width: 821px) {
+      width: 100%;
+    }
   }
 }
-.destination__ {
-  &title {
-    text-align: left;
-  }
-}
+
 
 .crew__ {
   &pagination {
@@ -22,9 +22,10 @@
   }
   &slide {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 80px;
+    // gap: 80px;
   }
   &info {
     max-width: 614px;
@@ -53,7 +54,7 @@
     max-width: 444px;
   }
   &imgCrew {
-    max-width: 568px;
+    max-width: 460px;
     height: auto;
     mask-image: linear-gradient(black 80%, transparent);
   }
@@ -74,13 +75,12 @@
 @media only screen and (max-width: 820px) {
   .space__ {
     &crew {
-      margin-top: 136px;
-      overflow: auto;
+      margin-top: 40px;
     }
   }
   .swiper__ {
     &content {
-      margin-top: 60px;
+      margin-top: 30px;
     }
   }
   .crew__ {
@@ -93,6 +93,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
     }
     &pagination {
       margin-top: 40px;
@@ -107,16 +108,16 @@
       font-size: 16px;
     }
     &imgCrew {
-      max-width: 540px;
+      max-width: 420px;
     }
   }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 460px) {
   .space__ {
     &crew {
       max-width: 100%;
-      margin-top: 145px;
+      margin-top: 20px;
       overflow-y: auto;
     }
   }

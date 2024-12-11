@@ -1,39 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
-const d ='/assets/destination/background-destination-desktop.jpg'
-const t ='/assets/destination/background-destination-tablet.jpg'
-const m ='/assets/destination/background-destination-mobile.jpg'
+const d = '/assets/destination/background-destination-desktop.jpg'
+const t = '/assets/destination/background-destination-tablet.jpg'
+const m = '/assets/destination/background-destination-mobile.jpg'
 ---
+
 <Layout bgImage=`${d}` bgTImg=`${t}` bgMImg=`${m}`>
-<div class="space__destination">
-  <h1 class="destination__title"> <span class="destination__number">01</span> PICK YOUR DESTINATION</h1>
-  <div class="destination__content">
-    <div class="destination__planet">
-      <img src="assets/destination/image-moon.png" alt="" class="destination__imgPlanet" id="imgPlanet">
-    </div>
-    <div class="destination__info">
-      <ul class="destination__list">
-        <li class="destination__option active" data-name="Moon" >MOON</li>
-        <li class="destination__option" data-name="Mars">MARS</li>
-        <li class="destination__option" data-name="Europa">EUROPA</li>
-        <li class="destination__option" data-name="Titan">TITAN</li>
-      </ul>
-      <h2 class="destination__name" id='destino'>MOON</h2>
-      <p class="destination__text" id="description">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
-      <div class="destination__line"></div>
-      <div class="destination__data">
-        <div class="data__datos distance">
-          <span  class="data__subtitle">AVG. DISTANCE</span>
-          <span class="data__dato km" id="avgDistance">384,400 KM</span>
-        </div>
-        <div class="data__datos travel">
-          <span class="data__subtitle">EST. TRAVEL TIME</span>
-          <span class="data__dato days" id='travelTime'>3 DAYS</span>
+  <div class="space__destination">
+    <h1 class="destination__title">
+      <span class="destination__number">01</span> PICK YOUR DESTINATION
+    </h1>
+    <div class="destination__content">
+      <div class="destination__planet">
+        <img
+          src="assets/destination/image-moon.png"
+          alt=""
+          class="destination__imgPlanet"
+          id="imgPlanet"
+        />
+      </div>
+      <div class="destination__info">
+        <ul class="destination__list">
+          <li class="destination__option active" data-name="Moon">MOON</li>
+          <li class="destination__option" data-name="Mars">MARS</li>
+          <li class="destination__option" data-name="Europa">EUROPA</li>
+          <li class="destination__option" data-name="Titan">TITAN</li>
+        </ul>
+        <h2 class="destination__name" id="destino">MOON</h2>
+        <p class="destination__text" id="description">
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+        <div class="destination__line"></div>
+        <div class="destination__data">
+          <div class="data__datos distance">
+            <span class="data__subtitle">AVG. DISTANCE</span>
+            <span class="data__dato km" id="avgDistance">384,400 KM</span>
+          </div>
+          <div class="data__datos travel">
+            <span class="data__subtitle">EST. TRAVEL TIME</span>
+            <span class="data__dato days" id="travelTime">3 DAYS</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
 </Layout>

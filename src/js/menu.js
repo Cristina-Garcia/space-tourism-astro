@@ -1,42 +1,37 @@
-const hamburger = document.querySelector('.header__hamburger')
-const nav = document.querySelector('.header__listmovil')
-const menu = document.querySelector('.header__menu')
+document.addEventListener('DOMContentLoaded', () => {
 
-let isOpen = false
-// hamburber.addEventListener('click', () => {
-//   isOpen = !isOpen
-//   // hamburber.style.backgroundImage = "url('/assets/shared/icon-close.svg')"
-//   // hamburber.setAttribute('src', '/assets/shared/icon-close.svg')
-//   nav.classList.toggle('active')
-//   menu.classList.toggle('active')
-//   if (isOpen) {
-//     hamburber.style.backgroundImage = "url('/assets/shared/icon-close.svg')"
-//   } else {
-//     hamburber.style.backgroundImage = "url('/assets/shared/icon-open.svg')" //
-//   }
-// })
+  const hamburger = document.querySelector('.header__hamburger')
+  const nav = document.querySelector('.header__listmovil')
+  const menu = document.querySelector('.header__menu')
 
-hamburger.addEventListener('click', () => {
-  isOpen = !isOpen
-  nav.classList.toggle('active')
-  menu.classList.toggle('active')
-  updateHamburgerIcon()
-})
+  let isOpen = false
 
-function updateHamburgerIcon() {
-  if (isOpen == true) {
-    hamburger.style.backgroundImage = "url('/assets/shared/icon-close.svg')"
-  } else {
-    hamburger.style.backgroundImage = "url('/assets/shared/icon-hamburger.svg')"
-  }
-}
-if (nav || menu) {
-  window.addEventListener('click', (e) => {
-    if (!e.target.classList.contains('header__listmovil')) {
-      console.log('jj')
-      nav.classList.remove('active')
-      menu.classList.remove('active')
-      updateHamburgerIcon()
+  hamburger.addEventListener('click', () => {
+    isOpen = !isOpen
+    updateHamburgerIcon()
+    if (isOpen) {
+      document.querySelector('.header__listmovil').style.display = 'flex'
     }
+    else {
+      document.querySelector('.header__listmovil').style.display = 'none'
+    }
+    console.log(nav.className)
+
   })
-}
+
+  function updateHamburgerIcon() {
+    if (isOpen == true) {
+      hamburger.style.backgroundImage = "url('/assets/shared/icon-close.svg')"
+    } else {
+      hamburger.style.backgroundImage = "url('/assets/shared/icon-hamburger.svg')"
+    }
+  }
+  if (nav || menu) {
+    window.addEventListener('click', (e) => {
+      if (!e.target.classList.contains('header__listmovil')) {
+        nav.classList.remove('active')
+        updateHamburgerIcon()
+      }
+    })
+  }
+})

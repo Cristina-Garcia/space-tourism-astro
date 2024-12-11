@@ -12,7 +12,7 @@
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "/public/css",
+      "savePath": "/css",
       "savePathReplacementPairs": null
     }
   ],

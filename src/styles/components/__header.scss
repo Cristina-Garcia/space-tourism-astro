@@ -66,6 +66,7 @@
 }
 .nav__ {
   &option {
+    --before-width: 0;
     font-size: 16px;
     font-weight: 400;
     font-family: 'Barlow Condensed', sans-serif;
@@ -81,11 +82,15 @@
       transform: translateX(-50%);
       top: 3.5rem;
       background: #ffffff;
-      width: 0;
+      // width: 0;
+      width: var(--before-width);
       height: 3px;
       transition: all 0.3s ease-in;
     }
     &:hover::before {
+      width: 100%;
+    }
+    &.active::before {
       width: 100%;
     }
   }

@@ -43,6 +43,7 @@ btns.forEach((btn) => {
     const widthWv = window.innerWidth
 
     const urlImg = widthWv >= 820 ? imgL.portrait : imgL.landscape
+
     img.setAttribute('src', `${urlImg}`)
     nameLaunch.textContent = currentLaunch.name.toUpperCase()
     p.textContent = currentLaunch.description

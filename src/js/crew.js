@@ -14,7 +14,6 @@ botons.forEach((element) => {
     const currentCrew = datos.find((obj) => {
       return obj.name == name
     })
-
     imgCrew.setAttribute('src', `${currentCrew.images.png}`)
     role.innerHTML = currentCrew.role.toUpperCase()
     nameCrew.innerHTML = currentCrew.name.toUpperCase()
